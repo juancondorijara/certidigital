@@ -34,7 +34,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     environment:
-      name: 'production'
+      name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
     
     steps:
@@ -48,6 +48,6 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'certidigital-person-be'
-          slot-name: 'production'
-          publish-profile: ${{ secrets.AzureAppService_PublishProfile_84bb7edd8b414430bcb9301555b87936 }}
+          slot-name: 'Production'
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E2BD4B471D494F8F9C9B06E667433CEC }}
           package: '*.jar'
