@@ -1,0 +1,57 @@
+2022-10-29 00:11:46.972  INFO 11564 --- [reactor-http-nio-3] c.m.service.impl.PersonServiceImpl       : Personas filtradas por estado = true
+2022-10-29 00:11:47.046 DEBUG 11564 --- [reactor-http-nio-3] o.s.d.r2dbc.core.NamedParameterExpander  : Expanding SQL statement [SELECT * FROM person WHERE active = :active ORDER BY id DESC] to [SELECT * FROM person WHERE active = $1 ORDER BY id DESC]
+2022-10-29 00:11:47.498  INFO 11564 --- [reactor-http-nio-4] c.m.service.impl.PersonServiceImpl       : Persona encontrada con el ID = 7
+2022-10-29 00:11:49.174  INFO 11564 --- [reactor-http-nio-1] c.m.service.impl.PersonServiceImpl       : Persona encontrada con el ID = 1
+2022-10-29 00:11:59.905  INFO 11564 --- [reactor-http-nio-3] c.m.service.impl.PersonServiceImpl       : Personas filtradas por estado = true
+2022-10-29 00:11:59.909 DEBUG 11564 --- [reactor-http-nio-3] o.s.d.r2dbc.core.NamedParameterExpander  : Expanding SQL statement [SELECT * FROM person WHERE active = :active ORDER BY id DESC] to [SELECT * FROM person WHERE active = $1 ORDER BY id DESC]
+2022-10-29 00:12:00.545  INFO 11564 --- [reactor-http-nio-4] c.m.service.impl.PersonServiceImpl       : Persona encontrada con el ID = 7
+2022-10-29 00:12:02.129  INFO 11564 --- [reactor-http-nio-1] c.m.service.impl.PersonServiceImpl       : Persona encontrada con el ID = 1
+2022-10-29 00:12:12.255  INFO 11564 --- [reactor-http-nio-4] c.m.service.impl.PersonServiceImpl       : Persona encontrada con el ID = 2
+2022-10-29 00:12:19.945  INFO 11564 --- [reactor-http-nio-1] c.m.service.impl.PersonServiceImpl       : Persona encontrada con el ID = 3
+2022-10-29 00:12:25.512  INFO 11564 --- [reactor-http-nio-4] c.m.service.impl.PersonServiceImpl       : Persona encontrada con el ID = 2
+2022-10-29 00:12:27.100  INFO 11564 --- [reactor-http-nio-1] c.m.service.impl.PersonServiceImpl       : Persona encontrada con el ID = 3
+2022-10-29 00:12:28.617  INFO 11564 --- [reactor-http-nio-4] c.m.service.impl.PersonServiceImpl       : Persona encontrada con el ID = 1
+2022-10-29 00:12:30.173  INFO 11564 --- [reactor-http-nio-1] c.m.service.impl.PersonServiceImpl       : Persona encontrada con el ID = 7
+2022-10-29 00:12:37.959  INFO 11564 --- [reactor-http-nio-4] c.m.service.impl.PersonServiceImpl       : Persona encontrada con el ID = 7
+2022-10-29 00:12:39.673  INFO 11564 --- [reactor-http-nio-1] c.m.service.impl.PersonServiceImpl       : Persona encontrada con el ID = 1
+2022-10-29 00:16:58.123  INFO 11564 --- [reactor-http-nio-4] c.m.service.impl.PersonServiceImpl       : Persona encontrada con el ID = 2
+2022-10-29 00:17:01.981  INFO 11564 --- [reactor-http-nio-1] c.m.service.impl.PersonServiceImpl       : Persona encontrada con el ID = 7
+2022-10-29 00:17:03.620  INFO 11564 --- [reactor-http-nio-4] c.m.service.impl.PersonServiceImpl       : Persona encontrada con el ID = 1
+2022-10-29 08:49:04.767  INFO 14380 --- [main] com.ms_person.MsPersonApplication        : Starting MsPersonApplication using Java 17.0.4.1 on DESKTOP-15E64H8 with PID 14380 (D:\JuanCondori\Documentos\IntelliJ_IDEA\PRS\PERSON\AZURE\ms-person\target\classes started by Juan Condori in D:\JuanCondori\Documentos\IntelliJ_IDEA\PRS\PERSON\AZURE\ms-person)
+2022-10-29 08:49:04.783  INFO 14380 --- [main] com.ms_person.MsPersonApplication        : No active profile set, falling back to 1 default profile: "default"
+2022-10-29 08:49:07.851  INFO 14380 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2022-10-29 08:49:08.154  INFO 14380 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 283 ms. Found 1 R2DBC repository interfaces.
+2022-10-29 08:49:08.984  INFO 14380 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=93b7c92f-4db2-3c9a-a37c-f1a224732a3b
+2022-10-29 08:49:09.846  INFO 14380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-10-29 08:49:09.850  INFO 14380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-10-29 08:49:09.857  INFO 14380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-10-29 08:49:17.047  WARN 14380 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-10-29 08:49:18.493  INFO 14380 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8085
+2022-10-29 08:49:21.510  INFO 14380 --- [main] com.ms_person.MsPersonApplication        : Started MsPersonApplication in 20.398 seconds (JVM running for 55.429)
+2022-10-29 08:50:53.496  INFO 14380 --- [reactor-http-nio-2] c.m.service.impl.PersonServiceImpl       : Personas filtradas por estado = true
+2022-10-29 08:50:53.773 DEBUG 14380 --- [reactor-http-nio-2] o.s.d.r2dbc.core.NamedParameterExpander  : Expanding SQL statement [SELECT * FROM person WHERE active = :active ORDER BY id DESC] to [SELECT * FROM person WHERE active = $1 ORDER BY id DESC]
+2022-10-29 08:50:56.759  INFO 14380 --- [reactor-http-nio-3] c.m.service.impl.PersonServiceImpl       : Persona encontrada con el ID = 7
+2022-10-29 08:50:58.293  INFO 14380 --- [reactor-http-nio-4] c.m.service.impl.PersonServiceImpl       : Persona encontrada con el ID = 1
+2022-10-29 08:51:05.242  INFO 14380 --- [reactor-http-nio-1] c.m.service.impl.PersonServiceImpl       : Personas filtradas por estado = true
+2022-10-29 08:51:05.245 DEBUG 14380 --- [reactor-http-nio-1] o.s.d.r2dbc.core.NamedParameterExpander  : Expanding SQL statement [SELECT * FROM person WHERE active = :active ORDER BY id DESC] to [SELECT * FROM person WHERE active = $1 ORDER BY id DESC]
+2022-10-29 08:51:05.859  INFO 14380 --- [reactor-http-nio-3] c.m.service.impl.PersonServiceImpl       : Persona encontrada con el ID = 7
+2022-10-29 08:51:07.393  INFO 14380 --- [reactor-http-nio-4] c.m.service.impl.PersonServiceImpl       : Persona encontrada con el ID = 1
+2022-10-29 08:51:11.997  INFO 14380 --- [reactor-http-nio-3] c.m.service.impl.PersonServiceImpl       : Persona encontrada con el ID = 2
+2022-10-29 08:51:16.464  INFO 14380 --- [reactor-http-nio-4] c.m.service.impl.PersonServiceImpl       : Persona encontrada con el ID = 3
+2022-10-29 08:51:20.693  INFO 14380 --- [reactor-http-nio-3] c.m.service.impl.PersonServiceImpl       : Persona encontrada con el ID = 2
+2022-10-29 08:51:22.255  INFO 14380 --- [reactor-http-nio-4] c.m.service.impl.PersonServiceImpl       : Persona encontrada con el ID = 3
+2022-10-29 08:51:23.775  INFO 14380 --- [reactor-http-nio-3] c.m.service.impl.PersonServiceImpl       : Persona encontrada con el ID = 1
+2022-10-29 08:51:25.278  INFO 14380 --- [reactor-http-nio-4] c.m.service.impl.PersonServiceImpl       : Persona encontrada con el ID = 7
+2022-10-29 08:51:36.986  INFO 14380 --- [reactor-http-nio-2] c.m.service.impl.PersonServiceImpl       : Persona encontrada con el ID = 2
+2022-10-29 08:58:29.822  INFO 14380 --- [reactor-http-nio-3] c.m.service.impl.PersonServiceImpl       : Personas filtradas por estado = true
+2022-10-29 08:58:29.825 DEBUG 14380 --- [reactor-http-nio-3] o.s.d.r2dbc.core.NamedParameterExpander  : Expanding SQL statement [SELECT * FROM person WHERE active = :active ORDER BY id DESC] to [SELECT * FROM person WHERE active = $1 ORDER BY id DESC]
+2022-10-29 08:58:30.554  INFO 14380 --- [reactor-http-nio-3] c.m.service.impl.PersonServiceImpl       : Persona encontrada con el ID = 7
+2022-10-29 08:58:32.251  INFO 14380 --- [reactor-http-nio-4] c.m.service.impl.PersonServiceImpl       : Persona encontrada con el ID = 1
+2022-10-29 09:00:20.636  INFO 14380 --- [reactor-http-nio-3] c.m.service.impl.PersonServiceImpl       : Persona encontrada con el ID = 2
+2022-10-29 09:02:37.641  INFO 14380 --- [reactor-http-nio-4] c.m.service.impl.PersonServiceImpl       : Persona encontrada con el ID = 2
+2022-10-29 11:06:00.801  INFO 14380 --- [reactor-http-nio-1] c.m.service.impl.PersonServiceImpl       : Personas filtradas por estado = true
+2022-10-29 11:06:00.830 DEBUG 14380 --- [reactor-http-nio-1] o.s.d.r2dbc.core.NamedParameterExpander  : Expanding SQL statement [SELECT * FROM person WHERE active = :active ORDER BY id DESC] to [SELECT * FROM person WHERE active = $1 ORDER BY id DESC]
+2022-10-29 11:06:01.300  INFO 14380 --- [reactor-http-nio-4] c.m.service.impl.PersonServiceImpl       : Persona encontrada con el ID = 7
+2022-10-29 11:06:02.933  INFO 14380 --- [reactor-http-nio-3] c.m.service.impl.PersonServiceImpl       : Persona encontrada con el ID = 1
+2022-10-29 11:06:08.802  INFO 14380 --- [reactor-http-nio-1] c.m.service.impl.PersonServiceImpl       : Personas filtradas por estado = true
+2022-10-29 11:06:08.805 DEBUG 14380 --- [reactor-http-nio-1] o.s.d.r2dbc.core.NamedParameterExpander  : Expanding SQL statement [SELECT * FROM person WHERE active = :active ORDER BY id DESC] to [SELECT * FROM person WHERE active = $1 ORDER BY id DESC]
