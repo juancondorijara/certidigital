@@ -6,7 +6,7 @@ name: Build and deploy JAR app to Azure Web App - certidigital-person-be
 on:
   push:
     branches:
-      - ms-person-beee
+      - ms-person-be
   workflow_dispatch:
 
 jobs:
