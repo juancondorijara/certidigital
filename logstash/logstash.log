@@ -1,0 +1,71 @@
+2022-11-09 22:13:45.753  INFO 13704 --- [restartedMain] c.a.institute.InstituteApplication       : Starting InstituteApplication using Java 17.0.4.1 on DESKTOP-15E64H8 with PID 13704 (D:\JuanCondori\Documentos\IntelliJ_IDEA\PRS\institute\target\classes started by Juan Condori in D:\JuanCondori\Documentos\IntelliJ_IDEA\PRS\institute)
+2022-11-09 22:13:45.753  INFO 13704 --- [restartedMain] c.a.institute.InstituteApplication       : No active profile set, falling back to 1 default profile: "default"
+2022-11-09 22:13:45.926  INFO 13704 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-09 22:13:45.926  INFO 13704 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-09 22:13:48.478  INFO 13704 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2022-11-09 22:13:48.681  INFO 13704 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 193 ms. Found 1 R2DBC repository interfaces.
+2022-11-09 22:13:49.356  INFO 13704 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d01b417a-b128-3c3b-a8e8-75873586ff48
+2022-11-09 22:13:51.963  WARN 13704 --- [restartedMain] onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'instituteAplication': Unsatisfied dependency expressed through field 'instituteService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'instituteServiceImpl': Unsatisfied dependency expressed through field 'instituteRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'instituteRepository' defined in com.as201msinstitute.institute.repository.instituteRepository defined in @EnableR2dbcRepositories declared on R2dbcRepositoriesAutoConfigureRegistrar.EnableR2dbcRepositoriesConfiguration: Cannot resolve reference to bean 'r2dbcEntityTemplate' while setting bean property 'entityOperations'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.data.r2dbc.R2dbcDataAutoConfiguration': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'r2dbcDatabaseClient' defined in class path resource [org/springframework/boot/autoconfigure/r2dbc/ConnectionFactoryDependentConfiguration.class]: Unsatisfied dependency expressed through method 'r2dbcDatabaseClient' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'connectionFactory' defined in class path resource [org/springframework/boot/autoconfigure/r2dbc/ConnectionFactoryConfigurations$PoolConfiguration$PooledConnectionFactoryConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [io.r2dbc.pool.ConnectionPool]: Factory method 'connectionFactory' threw exception; nested exception is org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryOptionsInitializer$ConnectionFactoryBeanCreationException: Failed to determine a suitable R2DBC Connection URL
+2022-11-09 22:13:52.104  INFO 13704 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-11-09 22:13:52.238 ERROR 13704 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a ConnectionFactory: 'url' attribute is not specified and no embedded database could be configured.
+
+Reason: Failed to determine a suitable R2DBC Connection URL
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2022-11-09 22:16:18.502  INFO 11384 --- [restartedMain] c.a.institute.InstituteApplication       : Starting InstituteApplication using Java 17.0.4.1 on DESKTOP-15E64H8 with PID 11384 (D:\JuanCondori\Documentos\IntelliJ_IDEA\PRS\institute\target\classes started by Juan Condori in D:\JuanCondori\Documentos\IntelliJ_IDEA\PRS\institute)
+2022-11-09 22:16:18.510  INFO 11384 --- [restartedMain] c.a.institute.InstituteApplication       : No active profile set, falling back to 1 default profile: "default"
+2022-11-09 22:16:18.680  INFO 11384 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-09 22:16:18.680  INFO 11384 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-09 22:16:21.151  INFO 11384 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2022-11-09 22:16:21.342  INFO 11384 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 179 ms. Found 1 R2DBC repository interfaces.
+2022-11-09 22:16:21.890  INFO 11384 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d01b417a-b128-3c3b-a8e8-75873586ff48
+2022-11-09 22:16:22.840  WARN 11384 --- [restartedMain] onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'instituteAplication': Unsatisfied dependency expressed through field 'instituteService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'instituteServiceImpl': Unsatisfied dependency expressed through field 'instituteRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'instituteRepository' defined in com.as201msinstitute.institute.repository.instituteRepository defined in @EnableR2dbcRepositories declared on R2dbcRepositoriesAutoConfigureRegistrar.EnableR2dbcRepositoriesConfiguration: Cannot resolve reference to bean 'r2dbcEntityTemplate' while setting bean property 'entityOperations'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.data.r2dbc.R2dbcDataAutoConfiguration': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'r2dbcDatabaseClient' defined in class path resource [org/springframework/boot/autoconfigure/r2dbc/ConnectionFactoryDependentConfiguration.class]: Unsatisfied dependency expressed through method 'r2dbcDatabaseClient' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'connectionFactory' defined in class path resource [org/springframework/boot/autoconfigure/r2dbc/ConnectionFactoryConfigurations$PoolConfiguration$PooledConnectionFactoryConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [io.r2dbc.pool.ConnectionPool]: Factory method 'connectionFactory' threw exception; nested exception is org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryOptionsInitializer$ConnectionFactoryBeanCreationException: Failed to determine a suitable R2DBC Connection URL
+2022-11-09 22:16:22.925  INFO 11384 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-11-09 22:16:22.979 ERROR 11384 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a ConnectionFactory: 'url' attribute is not specified and no embedded database could be configured.
+
+Reason: Failed to determine a suitable R2DBC Connection URL
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2022-11-09 22:17:43.875  INFO 13332 --- [restartedMain] c.a.institute.InstituteApplication       : Starting InstituteApplication using Java 17.0.4.1 on DESKTOP-15E64H8 with PID 13332 (D:\JuanCondori\Documentos\IntelliJ_IDEA\PRS\institute\target\classes started by Juan Condori in D:\JuanCondori\Documentos\IntelliJ_IDEA\PRS\institute)
+2022-11-09 22:17:43.875  INFO 13332 --- [restartedMain] c.a.institute.InstituteApplication       : No active profile set, falling back to 1 default profile: "default"
+2022-11-09 22:17:44.004  INFO 13332 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-09 22:17:44.004  INFO 13332 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-09 22:17:45.426  INFO 13332 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2022-11-09 22:17:45.551  INFO 13332 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 115 ms. Found 1 R2DBC repository interfaces.
+2022-11-09 22:17:45.926  INFO 13332 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d01b417a-b128-3c3b-a8e8-75873586ff48
+2022-11-09 22:17:47.377  INFO 13332 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-09 22:17:51.766  INFO 13332 --- [restartedMain] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8089
+2022-11-09 22:17:53.482  INFO 13332 --- [restartedMain] c.a.institute.InstituteApplication       : Started InstituteApplication in 12.148 seconds (JVM running for 17.183)
+2022-11-09 22:18:05.857  INFO 13332 --- [reactor-http-nio-3] c.a.i.service.impl.instituteServiceImpl  : Mostrando todas los institutos
