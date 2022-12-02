@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: ms-student
+    name: institute
 #  r2dbc:
 #    url: r2dbc:postgresql://localhost:5432/ms_institute
 #    username: postgres
