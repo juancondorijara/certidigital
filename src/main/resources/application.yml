@@ -3,17 +3,17 @@ server:
 
 spring:
   application:
-    name: institute
-  r2dbc:
-    url: r2dbc:postgresql://localhost:5432/ms_institute
-    username: postgres
-    password: 12345
+    name: ms-student
 #  r2dbc:
-#    properties:
-#      sslMode: REQUIRE
-#    url: r2dbc:pool:postgres://certidigitalvg.postgres.database.azure.com:5432/ms_institute
-#    username: postgres@certidigitalvg
-#    password: java@2022
+#    url: r2dbc:postgresql://localhost:5432/ms_institute
+#    username: postgres
+#    password: 12345
+  r2dbc:
+    properties:
+      sslMode: REQUIRE
+    url: r2dbc:pool:postgres://certidigitalvg.postgres.database.azure.com:5432/ms_institute
+    username: postgres@certidigitalvg
+    password: java@2022
 
 logging:
   file:
