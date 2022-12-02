@@ -66,14 +66,14 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public Mono<Student> save(Student student) {
         log.info("Estudiante creado = " + student.toString());
-        student.setStatus("Estudiante");
+        student.setStatus("E");
         return studentRepository.save(student);
     }
 
     @Override
     public Mono<Student> update(Student student) {
         log.info("Estudiante actualizado = " + student.toString());
-        student.setStatus("Estudiante");
+        student.setStatus("E");
         return studentRepository.save(student);
     }
 
@@ -81,7 +81,7 @@ public class StudentServiceImpl implements StudentService {
     public Mono<ResponseEntity<Student>> deleteGraduated(Long id) {
         log.info("Estudiante cambiado a egresado = " + id);
         return studentRepository.findById(id).flatMap(newStudent -> {
-            newStudent.setStatus("Egresado");
+            newStudent.setStatus("G");
             return studentRepository.save(newStudent);
         }).map(updatedDocument -> new ResponseEntity<>(updatedDocument, HttpStatus.OK)).defaultIfEmpty(new ResponseEntity<>(HttpStatus.OK));
     }
@@ -90,7 +90,7 @@ public class StudentServiceImpl implements StudentService {
     public Mono<ResponseEntity<Student>> deleteRetired(Long id) {
         log.info("Estudiante cambiado a retirado = " + id);
         return studentRepository.findById(id).flatMap(newStudent -> {
-            newStudent.setStatus("Retirado");
+            newStudent.setStatus("R");
             return studentRepository.save(newStudent);
         }).map(updatedDocument -> new ResponseEntity<>(updatedDocument, HttpStatus.OK)).defaultIfEmpty(new ResponseEntity<>(HttpStatus.OK));
     }
@@ -99,7 +99,7 @@ public class StudentServiceImpl implements StudentService {
     public Mono<ResponseEntity<Student>> restore(Long id) {
         log.info("Estudiante restaurado = " + id);
         return studentRepository.findById(id).flatMap(newStudent -> {
-            newStudent.setStatus("Estudiante");
+            newStudent.setStatus("E");
             return studentRepository.save(newStudent);
         }).map(updatedDocument -> new ResponseEntity<>(updatedDocument, HttpStatus.OK)).defaultIfEmpty(new ResponseEntity<>(HttpStatus.OK));
     }
