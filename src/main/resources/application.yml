@@ -1,0 +1,25 @@
+server:
+  port: 8087
+
+spring:
+  application:
+    name: as201-ms-career
+  #  r2dbc:
+  #    url: r2dbc:postgresql://localhost:5432/ms_career
+  #    username: postgres
+  #    password: 12345
+  r2dbc:
+    properties:
+      sslMode: REQUIRE
+    url: r2dbc:pool:postgres://certidigitalvg.postgres.database.azure.com:5432/ms_career
+    username: postgres@certidigitalvg
+    password: java@2022
+
+logging:
+  file:
+    name: .\logstash\logstash.log
+  level:
+    org:
+      springframework:
+        data:
+          r2dbc: DEBUG
