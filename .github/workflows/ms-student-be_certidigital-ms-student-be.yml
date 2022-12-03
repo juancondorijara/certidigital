@@ -6,7 +6,7 @@ name: Build and deploy JAR app to Azure Web App - certidigital-ms-student-be
 on:
   push:
     branches:
-      - ms-student-beee
+      - ms-student-be
   workflow_dispatch:
 
 jobs:
