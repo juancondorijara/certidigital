@@ -112,7 +112,7 @@ public class StudentServiceImpl implements StudentService {
             Mono<Person> person = personFeignClient.findPersonById(dataStudent.getPerson_id());
             person.subscribe(getPerson -> dataStudent.setPerson_name(getPerson.getName() + " " + getPerson.getLastname()));
             try {
-                Thread.sleep(1500);
+                Thread.sleep(4000);
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
             }
