@@ -106,13 +106,13 @@ public class StudentServiceImpl implements StudentService {
 
     public Flux<Student> findStudentTransacction(Flux<Student> list) {
         return list.concatMap(Flux::just).publishOn(Schedulers.boundedElastic()).map(dataStudent -> {
-            Mono<Career> career = careerFeignClient.findCareerById(dataStudent.getCareer_id());
-            career.subscribe(getCareer -> dataStudent.setCareer_name(getCareer.getName()));
+            //Mono<Career> career = careerFeignClient.findCareerById(dataStudent.getCareer_id());
+            //career.subscribe(getCareer -> dataStudent.setCareer_name(getCareer.getName()));
 
-            Mono<Person> person = personFeignClient.findPersonById(dataStudent.getPerson_id());
-            person.subscribe(getPerson -> dataStudent.setPerson_name(getPerson.getName() + " " + getPerson.getLastname()));
+            //Mono<Person> person = personFeignClient.findPersonById(dataStudent.getPerson_id());
+            //person.subscribe(getPerson -> dataStudent.setPerson_name(getPerson.getName() + " " + getPerson.getLastname()));
             try {
-                Thread.sleep(4000);
+                Thread.sleep(1500);
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
             }
