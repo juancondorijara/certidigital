@@ -23,11 +23,11 @@ public class Student {
     @Column private String home_phone;
     @Column private String status;
 
-    @Transient
-    @JsonInclude(JsonInclude.Include.NON_NULL)
-    private String person_name;
-    @Transient
-    @JsonInclude(JsonInclude.Include.NON_NULL)
-    private String career_name;
+    //@Transient
+    //@JsonInclude(JsonInclude.Include.NON_NULL)
+    //private String person_name;
+    //@Transient
+    //@JsonInclude(JsonInclude.Include.NON_NULL)
+    //private String career_name;
 
 }
