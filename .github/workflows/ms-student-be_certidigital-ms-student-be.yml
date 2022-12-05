@@ -49,5 +49,5 @@ jobs:
         with:
           app-name: 'certidigital-ms-student-be'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F7B5561036404AA59E1C140219D2038B }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_99F2DBCB22A346E29F727729044FDA6D }}
           package: '*.jar'
