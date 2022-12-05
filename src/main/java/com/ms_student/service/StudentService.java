@@ -15,9 +15,9 @@ public interface StudentService {
 
     Flux<Student> findByStatus(String status);
 
-    Flux<Student> findPersonById(Long person_id);
+    /*Flux<Student> findPersonById(Long person_id);
 
-    Flux<Student> findCareerById(Long career_id);
+    Flux<Student> findCareerById(Long career_id);*/
 
     Mono<Student> save(Student student);
 
