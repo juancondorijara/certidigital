@@ -16,9 +16,4 @@ public interface StudentRepository extends ReactiveCrudRepository<Student, Long>
     @Query("SELECT * FROM student WHERE status = :status ORDER BY id DESC")
     Flux<Student> findByStatus(@Param("status") String status);
 
-    @Query("SELECT * FROM student WHERE person_id = :person_id ORDER BY id DESC")
-    Flux<Student> findPersonById(@Param("person_id") Long person_id);
-
-    @Query("SELECT * FROM student WHERE career_id = :career_id ORDER BY id DESC")
-    Flux<Student> findCareerById(@Param("career_id") Long career_id);
 }
