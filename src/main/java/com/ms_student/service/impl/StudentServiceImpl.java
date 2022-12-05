@@ -25,11 +25,11 @@ public class StudentServiceImpl implements StudentService {
     @Autowired
     private StudentRepository studentRepository;
 
-    //@Autowired
-    //private CareerFeignClient careerFeignClient;
+    /*@Autowired
+    private CareerFeignClient careerFeignClient;
 
-    //@Autowired
-    //private PersonFeignClient personFeignClient;
+    @Autowired
+    private PersonFeignClient personFeignClient;*/
 
     @Override
     public Flux<Student> findAll() {
@@ -53,7 +53,7 @@ public class StudentServiceImpl implements StudentService {
         //return findStudentTransacction(list);
     }
 
-    @Override
+    /*@Override
     public Flux<Student> findPersonById(Long person_id) {
         log.info("Personas encontrados con ID de la persona = " + person_id);
         return studentRepository.findPersonById(person_id);
@@ -63,7 +63,7 @@ public class StudentServiceImpl implements StudentService {
     public Flux<Student> findCareerById(Long career_id) {
         log.info("Carreras encontrados con ID de la carrera = " + career_id);
         return studentRepository.findCareerById(career_id);
-    }
+    }*/
 
     @Override
     public Mono<Student> save(Student student) {
@@ -106,20 +106,20 @@ public class StudentServiceImpl implements StudentService {
         }).map(updatedDocument -> new ResponseEntity<>(updatedDocument, HttpStatus.OK)).defaultIfEmpty(new ResponseEntity<>(HttpStatus.OK));
     }
 
-    //public Flux<Student> findStudentTransacction(Flux<Student> list) {
-        //return list.concatMap(Flux::just).publishOn(Schedulers.boundedElastic()).map(dataStudent -> {
-            //Mono<Career> career = careerFeignClient.findCareerById(dataStudent.getCareer_id());
-            //career.subscribe(getCareer -> dataStudent.setCareer_name(getCareer.getName()));
+    /*public Flux<Student> findStudentTransacction(Flux<Student> list) {
+        return list.concatMap(Flux::just).publishOn(Schedulers.boundedElastic()).map(dataStudent -> {
+            Mono<Career> career = careerFeignClient.findCareerById(dataStudent.getCareer_id());
+            career.subscribe(getCareer -> dataStudent.setCareer_name(getCareer.getName()));
 
-            //Mono<Person> person = personFeignClient.findPersonById(dataStudent.getPerson_id());
-            //person.subscribe(getPerson -> dataStudent.setPerson_name(getPerson.getName() + " " + getPerson.getLastname()));
-            //try {
-                //Thread.sleep(1500);
-            //} catch (InterruptedException e) {
-                //Thread.currentThread().interrupt();
-            //}
-            //return dataStudent;
-        //});
-    //}
+            Mono<Person> person = personFeignClient.findPersonById(dataStudent.getPerson_id());
+            person.subscribe(getPerson -> dataStudent.setPerson_name(getPerson.getName() + " " + getPerson.getLastname()));
+            try {
+                Thread.sleep(1500);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+            return dataStudent;
+        });
+    }*/
 
 }
