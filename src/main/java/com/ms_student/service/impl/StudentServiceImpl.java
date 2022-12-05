@@ -34,8 +34,9 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public Flux<Student> findAll() {
         log.info("Mostrando todas las estudiantes");
-        Flux<Student> list = studentRepository.findAll().publishOn(Schedulers.boundedElastic());
-        return findStudentTransacction(list);
+        return studentRepository.findAll();
+        //Flux<Student> list = studentRepository.findAll().publishOn(Schedulers.boundedElastic());
+        //return findStudentTransacction(list);
     }
 
     @Override
@@ -47,8 +48,9 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public Flux<Student> findByStatus(String status) {
         log.info("Estudiantes filtrados por estado = " + status);
-        Flux<Student> list = studentRepository.findByStatus(status).publishOn(Schedulers.boundedElastic());
-        return findStudentTransacction(list);
+        return studentRepository.findByStatus(status);
+        //Flux<Student> list = studentRepository.findByStatus(status).publishOn(Schedulers.boundedElastic());
+        //return findStudentTransacction(list);
     }
 
     @Override
