@@ -20,7 +20,7 @@ public class StudentController {
     @Autowired
     private StudentService studentService;
 
-    @Autowired
+    /*@Autowired
     private PersonFeignClient personFeignClient;
 
     @Autowired
@@ -48,7 +48,7 @@ public class StudentController {
         Flux<Student> studentFlux = studentService.findCareerById(career_id);
         Mono<Career> careerMono = careerFeignClient.findCareerById(career_id);
         return Flux.from(Flux.concat(Flux.from(studentFlux),Flux.from(careerMono)));
-    }
+    }*/
 
     @GetMapping
     public Flux<Student> findAll(){ return studentService.findAll(); }
